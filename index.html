@@ -1,0 +1,201 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy & Cookie Policy Builder — Legal Basics for Small Teams</title>
+  <meta name="description" content="Create a simple, human-readable Privacy & Cookie Policy for your website or app. Includes legal tips, checklists, and a quick policy generator." />
+  <meta name="keywords" content="privacy policy, cookie policy, GDPR, CCPA, legal template, compliance, small business" />
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-elevate>
+    <div class="container header-row">
+      <a class="brand" href="#home" aria-label="Privacy & Cookie Policy Builder — go home">
+        <img src="assets/logo.svg" alt="" width="36" height="36" />
+        <span>Privacy Builder</span>
+      </a>
+      <nav class="nav" aria-label="Main menu">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu" class="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#generator">Generator</a></li>
+          <li><a href="#checklist">Checklist</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="btn ghost" aria-pressed="false" title="Toggle theme">Theme</button>
+        <a class="btn primary" href="#generator">Generate</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="section hero">
+      <div class="container grid-2">
+        <div>
+          <span class="badge">Quick Start</span>
+          <h1>Privacy & Cookie Policy Builder</h1>
+          <p class="lead">
+            Create a plain‑English policy in minutes. Not a replacement for legal advice, but a clean starting point for <strong>GDPR/CCPA‑aware</strong> documentation.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#generator">Build my policy</a>
+            <a class="btn outline" href="#about">Learn more</a>
+          </div>
+          <ul class="bullets">
+            <li>Clear, readable structure</li>
+            <li>Key disclosures for data privacy</li>
+            <li>Export to TXT for your website</li>
+          </ul>
+        </div>
+        <div class="card spotlight">
+          <h3>What’s inside</h3>
+          <ul class="feature-list">
+            <li><strong>Policy generator</strong> with basic sections</li>
+            <li><strong>Cookie notice</strong> & consent tips</li>
+            <li><strong>Compliance checklist</strong> for teams</li>
+          </ul>
+          <div class="small muted">Tip: always get a local legal review before publishing.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <h2>About this project</h2>
+            <p>
+              This lightweight, single‑page toolkit helps small teams draft a baseline Privacy & Cookie Policy.
+              You can customize the text, then <em>download</em> a TXT you can paste into your CMS.
+              For regulated industries or global audiences, consult a qualified attorney.
+            </p>
+            <div class="meta">
+              <div class="meta-item">Version: 1.0</div>
+              <div class="meta-item">Format: TXT export</div>
+              <div class="meta-item">License: Personal use</div>
+            </div>
+          </div>
+          <div class="card code">
+<pre><code>// Example sections
+1. Who we are and contact
+2. Data we collect and why
+3. Cookies & tracking technologies
+4. Lawful bases / consent options
+5. Data retention & security
+6. Your rights and how to use them
+7. Contact & complaints
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GENERATOR -->
+    <section id="generator" class="section alt">
+      <div class="container">
+        <h2>Policy Generator</h2>
+        <form id="policyForm" class="form" autocomplete="off">
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="company">Company / App Name</label>
+              <input id="company" name="company" type="text" placeholder="Acme Apps Ltd" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Contact Email</label>
+              <input id="email" name="email" type="email" placeholder="privacy@acmeapps.io" required />
+            </div>
+            <div class="form-group">
+              <label for="location">Jurisdiction (optional)</label>
+              <input id="location" name="location" type="text" placeholder="UK / EU / US / Global" />
+            </div>
+            <div class="form-group">
+              <label for="cookies">Do you use cookies?</label>
+              <select id="cookies" name="cookies">
+                <option value="yes" selected>Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dataTypes">Data you collect (comma‑separated)</label>
+              <input id="dataTypes" name="dataTypes" type="text" placeholder="email, name, usage data, cookies" />
+            </div>
+            <div class="form-group">
+              <label for="purposes">Main purposes (comma‑separated)</label>
+              <input id="purposes" name="purposes" type="text" placeholder="account setup, analytics, customer support" />
+            </div>
+          </div>
+          <div class="actions">
+            <button class="btn primary" type="button" id="generateBtn">Generate</button>
+            <button class="btn ghost" type="button" id="downloadBtn" disabled>Download TXT</button>
+            <button class="btn outline" type="reset">Reset</button>
+          </div>
+        </form>
+
+        <article class="card policy-output" aria-live="polite" aria-atomic="true">
+          <h3>Preview</h3>
+          <textarea id="output" rows="18" readonly placeholder="Your policy will appear here…"></textarea>
+        </article>
+      </div>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section id="checklist" class="section">
+      <div class="container">
+        <h2>Compliance Checklist</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="c1" /> <label for="c1">Link your Privacy Policy in the footer and at sign‑up</label></li>
+          <li><input type="checkbox" id="c2" /> <label for="c2">Provide a clear cookie notice and consent options</label></li>
+          <li><input type="checkbox" id="c3" /> <label for="c3">Offer an easy way to exercise privacy rights</label></li>
+          <li><input type="checkbox" id="c4" /> <label for="c4">Define retention periods and security measures</label></li>
+          <li><input type="checkbox" id="c5" /> <label for="c5">Keep a data inventory and vendor list</label></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section alt">
+      <div class="container">
+        <h2>FAQ</h2>
+        <details class="card">
+          <summary>Does this make me GDPR/CCPA compliant?</summary>
+          <p>No. It’s a helpful start. Full compliance depends on your data flows, legal bases, and how you implement user rights & security.</p>
+        </details>
+        <details class="card">
+          <summary>Can I use this for my mobile app?</summary>
+          <p>Yes. You can adapt the wording for apps, web services, or desktop software.</p>
+        </details>
+        <details class="card">
+          <summary>Do I need a cookie banner?</summary>
+          <p>If you use non‑essential cookies (e.g., analytics/ads) in many jurisdictions you should ask consent before setting them.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="muted small">Questions or suggestions? Send a note to the email you included above, or replace this text with your real support channel.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div><strong>Privacy Builder</strong><div class="muted small">This is a demo; not legal advice.</div></div>
+      <button id="toTop" class="btn link">Back to top ↑</button>
+    </div>
+  </footer>
+</body>
+</html>
